@@ -10,6 +10,7 @@
 } */
 body{
   height: 100vh;
+  /* height: auto; */
 }
 .input-box{
   width: 90%;
@@ -31,7 +32,16 @@ body{
   /* padding: 14px 20px; */
   background-color: rgb(188, 113, 223);
   /* color: blue; */
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: black;
+  text-align: center;
 }
+
 div.hr {
   background: #484040  no-repeat scroll center;
   /* margin-left: 15em; */
@@ -43,3 +53,6 @@ div.hr {
   div.hr hr {
   display: none;
   } */
+.form-error{
+  color: red;
+}

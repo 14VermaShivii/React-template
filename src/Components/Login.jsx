@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
 import { loginschema } from ".";
 
+
 export const Login = () => {
     const initialValues = {
         email: "",
@@ -18,10 +19,11 @@ export const Login = () => {
             initialValues: initialValues,
             validationSchema: loginschema,
         })
+        // var ImageWrapper,getImageUrl,path    
     return (
-        // <div className="container-fluid">
+        <div className="container">
             <div className="container-fluid ">
-                <div className="row">
+                <div className="row ">
                     {/* <form> */}
                     <form onSubmit={handleSubmit} className="col-md-6 form ">
                         <div className="logo">
@@ -32,9 +34,7 @@ export const Login = () => {
                         {/* Email */}
                         <div className="justify-content-center ">
                             <label className="py-2"><b>Email address</b></label>
-
-
-                            <input className="input-box py-2"
+                            <input className="input-box py-2 "
                                 name="email"
                                 type="Email"
                                 id="Email"
@@ -50,9 +50,10 @@ export const Login = () => {
                                 <p className="form-error">{errors.email}</p>
                             ) : null}
                             {/* <FontAwesomeIcon icon={faUser} /> */}
-                            <label className="py-2"><b>Password</b></label>
+                     
 
-                            <input className="input-box py-2"
+                            <label className="py-2"><b>Password</b></label>
+                            <input className="input-box py-2 "
                                 type="Password"
                                 id="Password"
                                 placeholder=" Enter Password"
@@ -61,33 +62,39 @@ export const Login = () => {
                                 onBlur={handleBlur}
                             />
                             <FontAwesomeIcon icon={faLock} />
+                            
                             {errors.password && touched.password ? (
                                 <p className="form-error">{errors.password}</p>
                             ) : null}
+
                             <div className="forgot py-4 justify-content-end d-flex">
                                 {/* <label><input type="checkbox" />Remember me</label> */}
                                 <NavLink to="/Forgotpassword">Forgot Password ?</NavLink>
                             </div>
                             <div className=" py-2">
-                                <button className="input-box py-3 buttons" type="submit">Login now</button>
+                                <button className="input-box py-3 button buttons" type="submit">Login now</button>
                             </div>
-                            <hr/>
+                            <hr />
                             {/* <div class="hr"><hr or /></div> */}
                             <div className=" py-2">
-                              <button className="input-box py-3 buttons" type="submit">Signup now</button>
+                                <NavLink to="/signup" className="input-box py-3 buttons button" >Signup now</NavLink>
                             </div>
                         </div>
                     </form>
 
                     {/* </form> */}
-                    <div className="col-md-6  ">
+                    <div className="col-md-6  d-none d-md-block">
                         <img src={loginpageimage} width={600} height={600} />
-
+                        {/* <ImageWrapper key={loginpageimage.src}>
+                            <img src={getImageUrl(path, loginpageimage.src)} srcSet={getSrcSet(path, loginpageimage.src)}
+                                alt={loginpageimage.alt} width={600} height={600} />
+                        </ImageWrapper> */}
                     </div>
 
                 </div>
             </div>
-        // </div>
+        </div>
 
     )
 }
+// d-{sm,md,lg,xl}

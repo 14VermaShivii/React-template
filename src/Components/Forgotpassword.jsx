@@ -5,18 +5,18 @@ import logo from "/images/logo.jpg"
 import { useFormik } from "formik"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
-import { loginschema } from ".";
+import { forgotpasswordschema } from ".";
 
 export const Forgotpassword = () => {
     const initialValues = {
-        email: "",
-        password: ""
+        password: "",
+        confirmpassword: ""
     };
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
 
         useFormik({
             initialValues: initialValues,
-            validationSchema: loginschema,
+            validationSchema: forgotpasswordschema,
         })
     return (
         <div className="container-fluid">
@@ -31,14 +31,14 @@ export const Forgotpassword = () => {
 
                         {/* Email */}
                         <div className="justify-content-center ">
-                            <label className="py-2"><b>Email address</b></label>
+                            <label className="py-2"><b>Password</b></label>
 
 
-                            <input className="input-box py-2"
-                                name="email"
-                                type="Email"
-                                id="Email"
-                                placeholder="Enter Email"
+                            <input className="input-box py-2 "
+                                name="password"
+                                type="Password"
+                                id="Password"
+                                placeholder="Enter Password"
                                 autoComplete="off"
                                 onChange={handleChange}
                                 onBlur={handleBlur}
@@ -46,35 +46,36 @@ export const Forgotpassword = () => {
                             {/* <FontAwesomeIcon icon="fa-solid fa-envelope" /> */}
                             {/* <i class="fa-solid fa-envelope"></i> */}
                             <FontAwesomeIcon icon={faEnvelope} />
-                            {errors.email && touched.email ? (
-                                <p className="form-error">{errors.email}</p>
+                            {errors.password && touched.password ? (
+                                <p className="form-error">{errors.password}</p>
                             ) : null}
                             {/* <FontAwesomeIcon icon={faUser} /> */}
-                            <label className="py-2"><b>Password</b></label>
+                            <label className="py-2"><b>Confirmpassword</b></label>
 
-                            <input className="input-box py-2"
-                                type="Password"
-                                id="Password"
-                                placeholder=" Enter Password"
+                            <input className="input-box py-2 "
+                                type="password"
+                                id="ConfirmPassword"
+                                placeholder=" Enter change Password"
                                 autoComplete="off"
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
+                              <i class="fa fa-key fa-lg"></i>
                             <FontAwesomeIcon icon={faLock} />
-                            {errors.password && touched.password ? (
-                                <p className="form-error">{errors.password}</p>
+                            {errors.confirmpassword && touched.confirmpassword ? (
+                                <p className="form-error">{errors.confirmpassword}</p>
                             ) : null}
-                            <div className="forgot py-4 justify-content-end d-flex">
+                            {/* <div className="forgot py-4 justify-content-end d-flex">
                                 {/* <label><input type="checkbox" />Remember me</label> */}
-                                <NavLink to="/Forgotpassword">Forgot Password ?</NavLink>
+                            {/* <NavLink to="/Forgotpassword">Forgot Password ?</NavLink> */}
+                            {/* </div> */}
+                            <div className=" py-5">
+                                <button className="input-box py-3 buttons" type="submit">Change password</button>
                             </div>
-                            <div className=" py-2">
-                                <button className="input-box py-3 buttons" type="submit">Login now</button>
-                            </div>
-                            <hr/>
+                            <hr />
                             {/* <div class="hr"><hr or /></div> */}
                             <div className=" py-2">
-                              <button className="input-box py-3 buttons" type="submit">Signup now</button>
+                                <NavLink to="/" className="input-box py-3 button buttons" type="submit">Login now</NavLink>
                             </div>
                         </div>
                     </form>

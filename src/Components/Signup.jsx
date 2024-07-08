@@ -4,11 +4,12 @@ import loginpageimage from "/images/loginpageimage.jpg"
 import logo from "/images/logo.jpg"
 import { useFormik } from "formik"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
-import { loginschema } from ".";
+import { faEnvelope, faLock ,faUser} from '@fortawesome/free-solid-svg-icons'
+import { signupschema } from ".";
 
 export const Signup = () => {
     const initialValues = {
+        name: " ",
         email: "",
         password: ""
     };
@@ -16,7 +17,7 @@ export const Signup = () => {
 
         useFormik({
             initialValues: initialValues,
-            validationSchema: loginschema,
+            validationSchema: signupschema,
         })
     return (
         <div className="container-fluid">
@@ -31,28 +32,43 @@ export const Signup = () => {
 
                         {/* Email */}
                         <div className="justify-content-center ">
-                            <label className="py-2"><b>Email address</b></label>
+                            <label className="py-1"><b>Full name</b></label>
 
 
                             <input className="input-box py-2"
-                                name="email"
-                                type="Email"
-                                id="Email"
-                                placeholder="Enter Email"
+                                name="name"
+                                type="Name"
+                                id="Name"
+                                placeholder="Enter Name"
                                 autoComplete="off"
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
                             {/* <FontAwesomeIcon icon="fa-solid fa-envelope" /> */}
                             {/* <i class="fa-solid fa-envelope"></i> */}
+                            <FontAwesomeIcon icon={faUser} />
+                            {errors.name && touched.name ? (
+                                <p className="form-error">{errors.name}</p>
+                            ) : null}
+                            {/* <FontAwesomeIcon icon={faUser} /> */}
+                            <label className=" input-box py-1"><b>Email</b></label>
+
+                            <input className="input-box py-2"
+                                type="Email"
+                                id="Email"
+                                placeholder=" Enter Email"
+                                autoComplete="off"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                            />
                             <FontAwesomeIcon icon={faEnvelope} />
                             {errors.email && touched.email ? (
                                 <p className="form-error">{errors.email}</p>
                             ) : null}
-                            {/* <FontAwesomeIcon icon={faUser} /> */}
+
                             <label className="py-2"><b>Password</b></label>
 
-                            <input className="input-box py-2"
+                            <input className="input-box py-1"
                                 type="Password"
                                 id="Password"
                                 placeholder=" Enter Password"
@@ -60,6 +76,7 @@ export const Signup = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
+                           
                             <FontAwesomeIcon icon={faLock} />
                             {errors.password && touched.password ? (
                                 <p className="form-error">{errors.password}</p>
@@ -69,12 +86,12 @@ export const Signup = () => {
                                 <NavLink to="/Forgotpassword">Forgot Password ?</NavLink>
                             </div>
                             <div className=" py-2">
-                                <button className="input-box py-3 buttons" type="submit">Login now</button>
+                                <button className="input-box py-3 buttons" type="submit">Signup now</button>
                             </div>
-                            <hr/>
+                            <hr />
                             {/* <div class="hr"><hr or /></div> */}
                             <div className=" py-2">
-                                <button className="input-box py-3 buttons" type="submit">Signup now</button>
+                            <NavLink to="/" className="input-box py-3 button buttons" type="submit">Login now</NavLink>
                             </div>
                         </div>
                     </form>
