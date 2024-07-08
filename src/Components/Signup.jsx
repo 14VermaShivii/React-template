@@ -97,7 +97,7 @@ export const Signup = () => {
                     </form>
 
                     {/* </form> */}
-                    <div className="col-md-6  ">
+                    <div className="col-md-6  d-none d-md-block  ">
                         <img src={loginpageimage} width={600} height={600} />
 
                     </div>
