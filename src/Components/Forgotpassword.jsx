@@ -60,7 +60,7 @@ export const Forgotpassword = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
-                              <i class="fa fa-key fa-lg"></i>
+                              <i className="fa fa-key fa-lg"></i>
                             <FontAwesomeIcon icon={faLock} />
                             {errors.confirmpassword && touched.confirmpassword ? (
                                 <p className="form-error">{errors.confirmpassword}</p>
@@ -75,7 +75,7 @@ export const Forgotpassword = () => {
                             <hr />
                             {/* <div class="hr"><hr or /></div> */}
                             <div className=" py-2">
-                                <NavLink to="/" className="input-box py-3 button buttons" type="submit">Login now</NavLink>
+                                <NavLink to="/" className=" btn-outline-primary input-box py-3  buttons" type="submit">Login now</NavLink>
                             </div>
                         </div>
                     </form>

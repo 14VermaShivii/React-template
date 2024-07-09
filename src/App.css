@@ -12,25 +12,31 @@ body{
   height: 100vh;
   /* height: auto; */
 }
+.col-md-6{
+  box-shadow: lightblue;
+
+}
 .input-box{
   width: 90%;
+  border-radius: 25px;
 
 }
 /* .button{
   width: 100%;
 } */
-.button {
-  width: 100%;
+ .button {
+  width: 70%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-}
+} 
 .buttons{
   /* margin: 8px 0 ; */
   /* padding: 14px 20px; */
   background-color: rgb(188, 113, 223);
+ 
   /* color: blue; */
   width: 90%;
   padding: 12px 20px;
@@ -40,7 +46,12 @@ body{
   box-sizing: border-box;
   color: black;
   text-align: center;
+  border-radius: 25px;
 }
+/* .border{
+color: rgb(82, 22, 138);
+border-radius: 50px;
+} */
 
 div.hr {
   background: #484040  no-repeat scroll center;
@@ -56,3 +67,4 @@ div.hr {
 .form-error{
   color: red;
 }
+
