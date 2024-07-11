@@ -21,7 +21,7 @@ export const Login = () => {
         })
     // var ImageWrapper,getImageUrl,path    
     return (
-        <div className="shadow-lg p-3 mb-5 bg-body rounded">
+        <div className=" mb-5 bg-body rounded">
                 <div className="container">
                     <div className="container-fluid ">
                         <div className="row ">
@@ -35,6 +35,7 @@ export const Login = () => {
                                 {/* Email */}
                                 <div className="justify-content-center ">
                                     <label className="py-2"><b>Email address</b></label>
+                                    
                                     <input className="input-box py-2 "
                                         name="email"
                                         type="Email"
@@ -78,7 +79,7 @@ export const Login = () => {
                                     <hr />
                                     {/* <div class="hr"><hr or /></div> */}
                                     <div className=" py-2">
-                                        <NavLink to="/signup" className=" btn btn-outline-primary py-3 buttons" >Signup now</NavLink>
+                                   <NavLink to="/signup" className="btn-outline-primary py-3 outline" >Signup now</NavLink>
                                     </div>
                                 </div>
                             </form>
@@ -86,10 +87,7 @@ export const Login = () => {
                             {/* </form> */}
                             <div className="col-md-6  d-none d-md-block">
                                 <img src={loginpageimage} width={600} height={600} />
-                                {/* <ImageWrapper key={loginpageimage.src}>
-                            <img src={getImageUrl(path, loginpageimage.src)} srcSet={getSrcSet(path, loginpageimage.src)}
-                                alt={loginpageimage.alt} width={600} height={600} />
-                        </ImageWrapper> */}
+                              
                             </div>
 
                         </div>

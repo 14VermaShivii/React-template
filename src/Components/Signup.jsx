@@ -91,7 +91,7 @@ export const Signup = () => {
                             <hr />
                             {/* <div class="hr"><hr or /></div> */}
                             <div className=" py-2">
-                            <NavLink to="/" className=" btn-outline-primary  input-box py-3  buttons" type="submit">Login now</NavLink>
+                            <NavLink to="/" className="btn-outline-primary  input-box py-3  outline" type="submit">Login now</NavLink>
                             </div>
                         </div>
                     </form>

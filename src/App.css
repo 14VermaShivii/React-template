@@ -47,6 +47,7 @@ body{
   color: black;
   text-align: center;
   border-radius: 25px;
+ 
 }
 /* .border{
 color: rgb(82, 22, 138);
@@ -67,4 +68,18 @@ div.hr {
 .form-error{
   color: red;
 }
+.outline{
+  /* background-color: rgb(96, 82, 102); */
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: black;
+  text-align: center;
+  border-radius: 25px;
+  outline-color: darkorchid;
+  outline-style:solid;
 
+}
