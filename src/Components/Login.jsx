@@ -46,7 +46,7 @@ export const Login = () => {
                                         onBlur={handleBlur}
                                     />
                                     {/* <FontAwesomeIcon icon="fa-solid fa-envelope" /> */}
-                                    <i className="fa-solid fa-envelope"></i>
+                                    {/* <i className="fa-solid fa-envelope fontuser"></i> */}
                                     <FontAwesomeIcon icon={faEnvelope} />
                                     {errors.email && touched.email ? (
                                         <p className="form-error">{errors.email}</p>
