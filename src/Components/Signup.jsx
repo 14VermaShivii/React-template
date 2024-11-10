@@ -46,7 +46,7 @@ export const Signup = () => {
                             />
                             {/* <FontAwesomeIcon icon="fa-solid fa-envelope" /> */}
                             {/* <i class="fa-solid fa-envelope"></i> */}
-                            <FontAwesomeIcon icon={faUser} />
+                            {/* <FontAwesomeIcon icon={faUser} /> */}
                             {errors.name && touched.name ? (
                                 <p className="form-error">{errors.name}</p>
                             ) : null}
@@ -61,7 +61,7 @@ export const Signup = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                             />
-                            <FontAwesomeIcon icon={faEnvelope} />
+                            {/* <FontAwesomeIcon icon={faEnvelope} /> */}
                             {errors.email && touched.email ? (
                                 <p className="form-error">{errors.email}</p>
                             ) : null}
@@ -77,7 +77,7 @@ export const Signup = () => {
                                 onBlur={handleBlur}
                             />
                            
-                            <FontAwesomeIcon icon={faLock} />
+                            {/* <FontAwesomeIcon icon={faLock} /> */}
                             {errors.password && touched.password ? (
                                 <p className="form-error">{errors.password}</p>
                             ) : null}

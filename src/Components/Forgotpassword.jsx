@@ -45,7 +45,7 @@ export const Forgotpassword = () => {
                             />
                             {/* <FontAwesomeIcon icon="fa-solid fa-envelope" /> */}
                             {/* <i class="fa-solid fa-envelope"></i> */}
-                            <FontAwesomeIcon icon={faEnvelope} />
+                            {/* <FontAwesomeIcon icon={faEnvelope} /> */}
                             {errors.password && touched.password ? (
                                 <p className="form-error">{errors.password}</p>
                             ) : null}
@@ -61,7 +61,7 @@ export const Forgotpassword = () => {
                                 onBlur={handleBlur}
                             />
                               <i className="fa fa-key fa-lg"></i>
-                            <FontAwesomeIcon icon={faLock} />
+                            {/* <FontAwesomeIcon icon={faLock} /> */}
                             {errors.confirmpassword && touched.confirmpassword ? (
                                 <p className="form-error">{errors.confirmpassword}</p>
                             ) : null}

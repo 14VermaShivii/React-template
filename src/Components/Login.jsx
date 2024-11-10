@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom"
 import loginpageimage from "/images/loginpageimage.jpg"
 import logo from "/images/logo.jpg"
 import { useFormik } from "formik"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
 import { loginschema } from ".";
 
 
@@ -47,7 +47,7 @@ export const Login = () => {
                                     />
                                     {/* <FontAwesomeIcon icon="fa-solid fa-envelope" /> */}
                                     {/* <i className="fa-solid fa-envelope fontuser"></i> */}
-                                    <FontAwesomeIcon icon={faEnvelope} />
+                                    {/* <FontAwesomeIcon icon={faEnvelope} /> */}
                                     {errors.email && touched.email ? (
                                         <p className="form-error">{errors.email}</p>
                                     ) : null}
@@ -63,7 +63,7 @@ export const Login = () => {
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                     />
-                                    <FontAwesomeIcon icon={faLock} />
+                                    {/* <FontAwesomeIcon icon={faLock} /> */}
 
                                     {errors.password && touched.password ? (
                                         <p className="form-error">{errors.password}</p>
